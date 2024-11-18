@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/img/Header.jpg"); 
+  background-size: cover;
+  background-position: center;
+  color: #fefefe;
+  height: 16rem;
+  padding: 4.5rem;
+}
+
+.menu {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem 1.5rem;
+}
+
+.borde {
+  border: solid black 1px;
+}
+
+.p-xs {
+  font-size: 0.85rem;
+}
+
+.name {
+  color: white;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: white;
+}
