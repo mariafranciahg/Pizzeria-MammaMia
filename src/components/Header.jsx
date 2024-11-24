@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="banner">
       <h1>Pizzería Mamma Mía!</h1>
-      <p>¡Tenemos las mejores pizzas que podrás encontras!</p>
+      <p>¡Tenemos las mejores pizzas que podrás encontrar!</p>
     </div>
   );
 };

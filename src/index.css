@@ -35,3 +35,24 @@ footer {
   background-color: #1f1f1f;
   color: white;
 }
+
+.error {
+  color: #ce0015;             
+  font-size: 16px;     
+  font-style: italic;    
+  padding-left: 1.5rem;   
+}
+
+.form-container {
+  padding-top: 4rem;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 40rem;
+  text-align: justify;
+  margin-top: 2.5rem;
+}
