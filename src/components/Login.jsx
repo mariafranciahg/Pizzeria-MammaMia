@@ -55,7 +55,7 @@ const Login = () => {
             {errorVacio ? <p className='error'> Debes completar todos los campos</p> : null}
             {errorPass? <p className='error'> La contraseña debe tener un mínimo de 6 caracteres</p> : null}
             
-            <button type="submit" className="btn btn-primary">Enviar</button>
+            <button type="submit" className="btn btn-primary">Login</button>
         </form>
 
     </div>

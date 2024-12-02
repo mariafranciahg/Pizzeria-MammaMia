@@ -56,3 +56,56 @@ footer {
   text-align: justify;
   margin-top: 2.5rem;
 }
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 0 10rem; 
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  align-items: center;
+  
+}
+
+.item img {
+  width: 7rem;
+  margin: 0;
+}
+
+.itemPizza {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+}
+
+
+
+.botonMenos {
+  width: 2.3rem;
+  background-color: white;
+  border: solid 1.5px #ce0015;
+  color: #ce0015;
+  border-radius: 8px;
+}
+
+.botonMas {
+  width: 2.3rem;
+  background-color: white;
+  border: solid 1.5px blue;
+  color: blue;
+  border-radius: 8px;
+}
+
+.listaIngredientes {
+  text-align: center;          
+  list-style-type: none;       
+  padding: 0;                  
+  margin: 0 0 .8rem 0; 
+
+}
