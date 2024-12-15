@@ -2,12 +2,12 @@ import React from 'react';
 
 const CardPizza = ({ nombre, precio, ingredientes, img }) => {
     return (
-      <div className="card" style={{ width: "18rem", margin: "10px", padding:0}}>
+      <div className="card shadowCard" style={{ width: "18rem", margin: "10px", padding:0}}>
         <img src={img} className="card-img-top" alt={nombre} />
         <div className="card-body">
           <h5 className="card-title">{nombre[0].toUpperCase() + nombre.slice(1).toLowerCase()}</h5>
-          <p className="p-xs mb-0"> <strong>Ingredientes:</strong> </p>
-          <ul className='listaIngredientes'>
+          <p className="pXs mb-0"> <strong>Ingredientes:</strong> </p>
+          <ul className='pXs listaIngredientes'>
             {ingredientes.map((ingrediente, indice) => (
               <li key={indice}>{ingrediente}</li>
             ))}

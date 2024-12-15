@@ -1,15 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
+
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/img/Header.jpg"); 
   background-size: cover;
   background-position: center;
   color: #fefefe;
-  height: 16rem;
-  padding: 4.5rem;
+  height: 25vh;
+  padding: 2rem;
 }
 
 .menu {
@@ -17,14 +17,18 @@
   display: flex;
   justify-content: space-between;
   padding: .2rem 1.5rem;
+  height: 6vh;
 }
 
 .borde {
   border: solid black 1px;
 }
 
-.p-xs {
+.pXs {
   font-size: 0.85rem;
+}
+.shadowCard {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .name {
@@ -34,6 +38,7 @@
 footer {
   background-color: #1f1f1f;
   color: white;
+  height: 8vh;
 }
 
 .error {
@@ -43,15 +48,34 @@ footer {
   padding-left: 1.5rem;   
 }
 
-.form-container {
-  padding-top: 4rem;
-  height: 83vh;
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 86vh; 
+  background-color: #f5f5f5;
+}
+
+.pageContent {
+  width: 50rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .form {
+  flex-direction: column;
+}
+
+
+.formContent {
   width: 40rem;
   text-align: justify;
   margin-top: 2.5rem;
@@ -62,31 +86,47 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   padding: 0 10rem; 
+  height: 61vh;
+  background-color: #f5f5f5;
+  overflow-y: auto
 }
 
-.item {
+.cartContent {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 1.2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.itemCart {
+  display: flex;
   align-items: center;
-  
+  justify-content: space-between;
 }
 
-.item img {
-  width: 7rem;
-  margin: 0;
-}
 
-.itemPizza {
+.itemName, .itemButton {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
 
+.itemPrice {
+  display: flex;
+  justify-content: space-between; 
+  width: 50%;
+}
+
+.itemName img {
+  width: 7rem;
+  margin: 0;
 }
 
 
 
 .botonMenos {
+  height: 2.3rem;
   width: 2.3rem;
   background-color: white;
   border: solid 1.5px #ce0015;
@@ -95,6 +135,7 @@ footer {
 }
 
 .botonMas {
+  height: 2.3rem;
   width: 2.3rem;
   background-color: white;
   border: solid 1.5px blue;
@@ -109,31 +150,61 @@ footer {
   margin: 0 0 .8rem 0; 
 
 }
-.container {
-  height: 85vh;
-  align-content: center;
-}
 
-.containerPizza {
+
+.pizzaContent {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   width: 65rem;
   text-align: center;
   margin: 5rem auto;   
-  gap: 3rem;
-  box-shadow: 2px 2px 8px rgb(205, 205, 205);
-  border-radius: 40px;
   
 }
 
-.containerPizza img {
+.pizzaContent img {
   width: 25rem;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
-  filter: brightness(0.85);
+  filter: brightness(0.95);
+}
+
+.pizzaText {
+  padding: 1rem 2rem;
 }
 
 .precioPizza {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+
+
+.notFoundImg {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.notFoundTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4778ff;
+  margin: 0;
+}
+
+.notFoundText {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+
+.profileEmail {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

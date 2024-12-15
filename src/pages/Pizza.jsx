@@ -24,10 +24,10 @@ const Pizza = () => {
   
 
   return (
-    <div className='container'>
-    <div className='containerPizza'>
+    <div className='pageContainer'>
+    <div className='pizzaContent'>
         <img src={pizza.img}  alt={pizza.name} />
-        <div>
+        <div className='pizzaText'>
             <h1>{pizza.name[0].toUpperCase() + pizza.name.slice(1).toLowerCase()}</h1>
             
             <p>{pizza.desc}</p>

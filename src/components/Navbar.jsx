@@ -1,33 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const total = 25000;
-  const token = false; 
+  const token = false;
 
   return (
     
     <nav className=" menu">
       <div style={{display:'flex', color: "white", gap:".5rem", alignItems:'center'}}>
         <strong>Pizzería Mamma Mia!</strong>
-        <button className="btn btn-outline-light">🍕 Home</button>
+        <Link to="/" className="btn btn-outline-light">🍕 Home</Link>
         
 
       
         {token ? (
           <>
-            <button className="btn btn-outline-light">🔓 Profile</button>
-            <button className="btn btn-outline-light">🔒 Logout</button>
+            <Link to="/profile" className="btn btn-outline-light">🔓 Profile</Link>
+            <Link to="/" className="btn btn-outline-light">🔒 Logout</Link>
           </>
         ) : (
           <>
-            <button className="btn btn-outline-light">🔐 Login</button>
-            <button className="btn btn-outline-light">🔐 Register</button>
+            <Link to="/login" className="btn btn-outline-light">🔐 Login</Link>
+            <Link to="/register" className="btn btn-outline-light">🔐 Register</Link>
           </>
         )}
       </div>
 
       <div>
-        <button className="btn btn-outline-info">🛒 Total: ${total.toLocaleString()}</button>
+        <Link to="/cart" className="btn btn-outline-info">🛒 Total: ${total.toLocaleString()}</Link>
       </div>
     </nav>
     
