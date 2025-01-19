@@ -1,10 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CardPizza = ({ id, nombre, precio, ingredientes, img, addCart }) => {
-const handlerAddCart = () => {
-  addCart(id);
-};
-
+  const navigate = useNavigate();
+  const handlerAddCart = () => addCart(id);
+  const handlerVerMas = () =>  navigate (`/pizza/${id}`);
     return (
       <div className="card shadowCard" style={{ width: "18rem", margin: "10px", padding:0}}>
         <img src={img} className="card-img-top" alt={nombre} />
@@ -17,7 +17,7 @@ const handlerAddCart = () => {
             ))}
           </ul>
           <p className="card-text"> <strong>Precio: ${precio.toLocaleString()}</strong></p>
-          <button className="btn btn-light mt-2" style={{border: "solid 1px black"}}>Ver más</button>
+          <button onClick={ handlerVerMas } className="btn btn-light mt-2" style={{border: "solid 1px black"}}>Ver más</button>
           <button className="btn btn-dark mt-2 ms-2" onClick={handlerAddCart}>Añadir</button>
         </div>
       </div>

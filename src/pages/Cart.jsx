@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { UserContext } from '../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-
+const { token } = useContext(UserContext); 
 const { cart, handleAgregar, handleQuitar, calcularTotal } = useContext(CartContext); 
+const navigate = useNavigate();
 
   return (
     <div className='pageContainer'>
@@ -37,6 +40,11 @@ const { cart, handleAgregar, handleQuitar, calcularTotal } = useContext(CartCont
         <div style={{ marginTop: '2rem' }}>
           <h3>Total: ${calcularTotal().toLocaleString()}</h3>
         </div>
+        { token ? (
+          <button className='btn btn-primary'> Pagar </button> 
+          ) : (
+            <button onClick={ () => navigate (`/login`)} className='btn btn-secondary'> Inicia sesión para pagar </button>
+          ) }
       </div>
     </div>
   )
