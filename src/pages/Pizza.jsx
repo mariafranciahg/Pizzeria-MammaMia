@@ -9,7 +9,7 @@ const Pizza = () => {
 
   const getPizza = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/pizzas');
+      const response = await fetch('http://localhost:5000/api/pizzas');
       const data = await response.json();
       setPizza(data); 
     } catch (error) {
@@ -27,7 +27,7 @@ const Pizza = () => {
   if (!pizzaActual) {
     return <div>Cargando...</div>; 
   }
-  
+
     return (
       <div className='pageContainer'>
       <div className='pizzaContent'>
