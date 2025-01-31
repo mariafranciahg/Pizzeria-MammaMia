@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { UserContext } from '../context/UserContext';
 
 const Navbar = () => {
   const { calcularTotal } = useContext(CartContext); 
-  const { token, logout } = useContext(UserContext);
+  const { logout, token } = useContext(UserContext);
   const setActiveclass = ({isActive}) => (isActive ? "btn btn-light" : "btn btn-outline-light");
 
 

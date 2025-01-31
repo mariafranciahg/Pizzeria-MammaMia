@@ -17,9 +17,9 @@ import { UserContext } from './context/UserContext';
 
 
 
-
 function App() {
   const { token } = useContext(UserContext);
+
 
   return (
     <>
@@ -29,11 +29,13 @@ function App() {
       
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/register' element={token ? <Navigate to="/"/> : <Register/>} />
-          <Route path='/login' element={token ? <Navigate to="/"/> : <Login/>} />
+          <Route path='/register' element={token ? <Navigate to="/"/> : <Register/>}
+           />
+          <Route path='/login' element={token ? <Navigate to="/profile"/> : <Login/>} />
           <Route path='/cart' element={<Cart/>} />
           <Route path='/pizza/:id' element={<Pizza />} />
-          <Route path='/profile' element={ token ? <Profile/> : <Navigate to="/login" />} />
+          <Route path='/profile' element={ token ? <Profile/> : <Navigate to="/login" />} 
+          />
           <Route path='*' element={<NotFound/>} />
         </Routes>
       

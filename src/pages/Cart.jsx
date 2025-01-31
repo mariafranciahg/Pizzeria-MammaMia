@@ -4,9 +4,9 @@ import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-const { token } = useContext(UserContext); 
-const { cart, handleAgregar, handleQuitar, calcularTotal } = useContext(CartContext); 
+const { cart, handleAgregar, handleQuitar, calcularTotal, enviarCarrito } = useContext(CartContext); 
 const navigate = useNavigate();
+const { token } = useContext(UserContext);
 
   return (
     <div className='pageContainer'>
@@ -41,7 +41,7 @@ const navigate = useNavigate();
           <h3>Total: ${calcularTotal().toLocaleString()}</h3>
         </div>
         { token ? (
-          <button className='btn btn-primary'> Pagar </button> 
+          <button onClick={enviarCarrito} className='btn btn-primary'> Pagar </button> 
           ) : (
             <button onClick={ () => navigate (`/login`)} className='btn btn-secondary'> Inicia sesión para pagar </button>
           ) }

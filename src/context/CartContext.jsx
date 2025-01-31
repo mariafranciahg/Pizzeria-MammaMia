@@ -37,9 +37,38 @@ const CartProvider = ({children}) => {
       });
       return total;
     };
-  
+    
+    const enviarCarrito = async (e) => {
+      e.preventDefault();
+      if (cart.length === 0) {
+        alert ('El carrito está vacío');
+        
+      } else {
+        const token = localStorage.getItem('token');
+        try {
+          const res = await fetch("http://localhost:5000/api/checkouts", 
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+              },
+              body: JSON.stringify( {
+                "cart": cart,
+              }),
+            });
+          const data = await res.json();
+          alert(`PAGO CORRECTO - ${data.message}`);
+          setCart([]);
+        } catch (e) {
+          console.log (e);
+        }
+
+      }
+    } 
+
     return (
-      <CartContext.Provider value={{cart, setCart, handleAgregar, handleQuitar, calcularTotal}}>
+      <CartContext.Provider value={{cart, setCart, handleAgregar, handleQuitar, calcularTotal, enviarCarrito}}>
         {children}
       </CartContext.Provider>
     );
